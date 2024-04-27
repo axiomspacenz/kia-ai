@@ -34,7 +34,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
         <Collection
           hasSearch={true}
           images={images?.data}
-          totalPages={images?.totalImages}
+          totalPages={images?.totalPage}
           page={page}
         />
       </section>
