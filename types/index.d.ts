@@ -36,6 +36,21 @@ declare type AddImageParams = {
     path: string;
 };
 
+declare type ImageParams = {
+
+    title: string;
+    publicId: string;
+    transformationType: string;
+    width: number;
+    height: number;
+    config: any;
+    secureURL: string;
+    transformationURL: string;
+    aspectRatio: string | undefined;
+    prompt: string | undefined;
+    color: string | undefined;
+};
+
 declare type UpdateImageParams = {
     image: {
         _id: string;
