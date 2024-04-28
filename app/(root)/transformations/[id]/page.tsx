@@ -25,7 +25,6 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
                         {image.transformationType}
                     </p>
                 </div>
-
                 {image.prompt && (
                     <>
                         <p className="hidden text-dark-400/50 md:block">&#x25CF;</p>

@@ -66,6 +66,8 @@ const TransformationForm = ({
 
     const router = useRouter()
 
+    console.log(image)
+
     const initialValues = data && action === "Update" ? {
         title: data?.title,
         aspectRatio: data?.aspectRatio,
@@ -202,6 +204,7 @@ const TransformationForm = ({
 
     return (
         <Form {...form}>
+
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
                 <CustomField
@@ -291,7 +294,7 @@ const TransformationForm = ({
                 <div className="flex flex-col gap-4">
                     <Button
                         className="submit-button capitalize"
-                        disabled={isTransforming || newTransformation === null}
+                        disabled={isTransforming || newTransformation === null || !image.publicId}
                         onClick={onTransformHandler}
                     >{isTransforming ? 'Transforming...' : 'Apply Transformation'}</Button>
                     <Button

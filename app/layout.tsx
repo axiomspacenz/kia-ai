@@ -1,20 +1,19 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import {
   ClerkProvider,
 } from "@clerk/nextjs";
 
-const IBMPlex = IBM_Plex_Sans({
+const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: '--font-ibm-plex'
 });
 
 export const metadata: Metadata = {
-  title: "Essenz",
-  description: "An ",
+  title: "ArtifiQ | AI Photo Editor",
+  description: "Unleash your creative potential with ArtifiQ - a powerful tool that empowers you to take your digital artistry to the next level. With this advanced AI tool, you can seamlessly restore images, resize them, remove unwanted objects, recolor elements, and even fill images with generative fill. Get ready to turn your artistic vision into reality with ArtifiQ!",
 };
 
 export default function RootLayout({
@@ -24,11 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider appearance={{
-      variables: { colorPrimary: "#624cf5" }
+      variables: { colorPrimary: "#03A09B" }
     }}>
       <html lang="en">
-        <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
+        <body className={raleway.className}>
           {children}
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

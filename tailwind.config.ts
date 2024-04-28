@@ -24,11 +24,11 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         purple: {
-          100: "#F4F7FE",
-          200: "#BCB6FF",
-          400: "#868CFF",
-          500: "#7857FF",
-          600: "#4318FF",
+          100: "#EBFFFE",
+          200: "#AFFDFB",
+          400: "#04C8C1",
+          500: "#03A09B",
+          600: "#027874",
         },
         dark: {
           400: "#7986AC",
